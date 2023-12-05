@@ -12,12 +12,4 @@ const client = axios.create({
   },
 });
 
-client.interceptors.response.use(
-  (response) => response,
-  (error) => {
-   console.log('✅ test    ', error)
-  }
-);
-
-
 export default client;

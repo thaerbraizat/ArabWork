@@ -4,7 +4,7 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 const state = {
-    querying:false,
+    querying:true,
     location:{ lat: 31.958090, lng:35.945808},
 };
 
@@ -13,7 +13,6 @@ const mutations = {
     state.querying=payload;
   },
   LOCATION(state, payload) {
-    console.log("paload", payload);
     state.location=payload;
   }
 };

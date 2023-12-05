@@ -1,21 +1,15 @@
 <template>
   <div>
+    <b-overlay :show="getQuerying" rounded="sm">
     <navbar-nav />
     <div id="app">
-
-      <div v-if="getQuerying">
-        <common-loading />
-      </div>
       <List />
       <Map />
-
     </div>
-
+  </b-overlay>
   </div>
 </template>
-
 <script>
-
 import List from './components/list.vue';
 import Map from './components/map.vue';
 
@@ -30,12 +24,6 @@ export default {
       return this.$store.getters.getQuerying;
     },
   },
-  mounted() {
-    console.log(this.$store);
-  },
-
-
-
 }
 </script>
 
@@ -44,9 +32,7 @@ body {
   margin: 0;
   padding: 0;
 }
-
 #app {
-
   display: flex;
   justify-content: space-between;
 }

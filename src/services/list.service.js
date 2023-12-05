@@ -1,14 +1,13 @@
 import client from "./axiosInstance";
 
-const danial = {
+const getData = {
   get: async() => {
     try {
       const response = await client.get("/api");
        return response;
     } catch (e) {
-      console.log("e upload", e);
+     return e.message
     }
   },
 };
-
-export default danial;
+export default getData;

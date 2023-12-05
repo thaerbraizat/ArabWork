@@ -1,9 +1,6 @@
-
-
 <template>
     <div>
         <b-navbar toggleable="lg" type="dark" variant="info">
-        
             <b-navbar-brand class="mx-auto">
         <div class="test">Arab Work</div>
       </b-navbar-brand>
